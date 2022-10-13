@@ -1,12 +1,14 @@
-function isPasswordValid(password) {
-  password = password.trim()
-  if (password.length >= 10) {
-    return true 
+function getLetterFromGrade(grade) {
+  if (grade >= 15) {
+    return "A"
+  } else if (grade >= 10) {
+    return "B"
   } else {
-    return false
+    return "F"
   }
 }
 
-console.log(isPasswordValid(" 12345678 ")) 
-//result w 10 characters including spaces is false because we trimmed the pw
-//with our code
+console.log(getLetterFromGrade(18))
+console.log(getLetterFromGrade(15))
+console.log(getLetterFromGrade(13))
+console.log(getLetterFromGrade(5))
