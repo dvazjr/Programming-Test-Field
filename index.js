@@ -1,19 +1,29 @@
-function double(x) {
-  return x * 2
+function sum(a, b) {
+  return a + b
+}
+function subtract(a, b) {
+  return a - b
+}
+function multiply(a, b) {
+  return a * b
+}
+function divide(a, b) {
+  return a / b
 }
 
-function triple(x) {
-  return x * 3
-}
-
-function run(operation, x) {
-  if (operation === "double") {
-    return double(x)
+function run(operation, x, y) {
+  if (operation === sum) {
+    return sum(x, y)
   }
-  if (operation === "triple") {
-    return triple(x)
+  if (operation === subtract) {
+    return subtract(x, y)
+  }
+  if (operation === multiply) {
+    return multiply(x, y)
+  }
+  if (operation === divide) {
+    return divide(x, y)
   }
 }
 
-console.log(run("double", 4))
-console.log(run("triple", 5))
+console.log(sum(1,3))
